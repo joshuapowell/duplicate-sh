@@ -3,9 +3,9 @@
 ##
 # Create a mirror of an existing repository
 #
-# :param $1 The origin account on GitHub.com
-# :param $2 The origin repository name on GitHub.com
-# :param $3 The new or mirror repository name on GitHub.com
+# :param $1 The origin account name on GitHub.com
+# :param $2 The mirror account name on GitHub.com
+# :param $3 The mirror repository name on GitHub.com
 #
 ##
 

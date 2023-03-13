@@ -9,10 +9,15 @@
 #
 ##
 
-# @todo Add check to see if the `git` command is available
-git clone --bare https://github.com/$1/$3.git;
+#!/bin/sh
+if ! type "$git" > /dev/null; then
+    # @todo Add check to see if the repository is available before
+    #       attempting to push to it.
 
-cd $3.git;
+    git clone --bare https://github.com/$1/$3.git;
 
-# @todo Add check to see if the repository is available before attempting to push to it.
-git push --mirror https://github.com/$2/$3.git;
+    cd $3.git;
+
+    git push --mirror https://github.com/$2/$3.git;
+
+fi
